@@ -5,7 +5,7 @@ import TrabajosActivos from "./pages/TrabajosActivos"
 
 function App() {
   return (
-    <Suspense>
+    <Suspense fallback={<h1>Cargando...</h1>}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/trabajosActivos" element={<TrabajosActivos />} />
