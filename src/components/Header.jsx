@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Header() {
   return (
-      <header>
+      <header className="d-print-none">
         <nav>
           <ul>
             <li>

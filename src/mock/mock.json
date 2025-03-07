@@ -1,0 +1,20 @@
+[
+	{
+		"firstName": "Tanner",
+		"lastName": "Linsley",
+		"age": 33,
+		"visits": 100,
+		"progress": 50,
+		"status": "Married",
+		"description": "F - GANCHO SENCILLO GALVANIZADO - 6620"
+	},
+	{
+		"firstName": "Kevin",
+		"lastName": "Vandy",
+		"age": 27,
+		"visits": 200,
+		"progress": 100,
+		"status": "Single",
+		"description": "F - GANCHO SENCILLO GALVANIZADO - 6620"
+	}
+]
