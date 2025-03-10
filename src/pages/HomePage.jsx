@@ -5,8 +5,7 @@ import * as XLSX from "xlsx";
 import mock  from "../mock/mock.json";
 import SimpleTable from "../components/SimpleTable";
 
-function HomePage() {
-  const [data, setData] = useState({ data: mock, columns: [{
+const columns = [{
       id: "firstName",
       header: ()=> "First Name",
       accessorKey: 'firstName',
@@ -63,7 +62,10 @@ function HomePage() {
       size: 0,
       minSize: 50,
     }
-    ]});
+    ]
+
+function HomePage() {
+  const [data, setData] = useState({ data: mock, columns});
 
   const [isLoading, setIsLoading] = useState(false);
   
