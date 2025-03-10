@@ -7,6 +7,8 @@ table {
 	border-spacing: 0;
 	width: 100%;
 	border: 1px solid #ddd;
+
+	font-size: 12px;
 }
 
 thead,
@@ -18,15 +20,52 @@ tfoot {
 th,
 td {
 	text-align: left;
-	padding: 4px 8px;
+	padding: 2px 4px;
 }
 
 th {
 	cursor: pointer;
+	position: relative;
 }
 
 tbody tr:nth-child(even) {
 	background: #f2f2f2;
+}
+
+.resizer {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 5px;
+	background-color: #27bbff;
+	cursor: col-resize;
+	user-select: none;
+	touch-action: none;
+	border-radius: 6px;
+}
+
+.resizer.isResizing {
+	background-color: #2eff31;
+	opacity: 1;
+}
+
+*:hover > .resizer {
+	opacity: 1;
+}
+
+td {
+	overflow: hidden;
+	/* white-space: nowrap; */
+	text-overflow: ellipsis;
+
+	&.item_desc {
+		overflow: hidden;
+		/* max-width: 180px; */
+		text-overflow: ellipsis;
+		/* white-space: nowrap; */
+	}
 }
 
 @media print {
@@ -58,7 +97,6 @@ tbody tr:nth-child(even) {
 		th,
 		td {
 			border: 1px solid #000;
-			padding: 2px 4px;
 		}
 	}
 }

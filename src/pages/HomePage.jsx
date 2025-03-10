@@ -11,36 +11,57 @@ function HomePage() {
       header: ()=> "First Name",
       accessorKey: 'firstName',
       cell: info => info.getValue() + '!!!',
+      enableResizing: true,
+      size: 0,
+      minSize: 50,
     },
     {
       id: "lastName",
       header: 'Last Name',
       accessorKey: 'lastName',
+      enableResizing: true,
+      size: 0,
+      minSize: 50,
     },
     { 
       id: "age",
       header: 'Age',
       accessorFn: row => row.age + '*', 
+      enableResizing: true,
+      size: 0,
+      minSize: 50,
     },
     {
       id: "visits",
       header: 'visits',
       accessorKey: 'visits',
+      enableResizing: true,
+      size: 0,
+      minSize: 50,
     },
     {
       id: "progress",
       header: 'progress',
       accessorKey: 'progress',
+      enableResizing: true,
+      size: 0,
+      minSize: 50,
     },
     {
       id: 'status',
       header: 'status',
       accessorKey: 'status',
+      enableResizing: true,
+      size: 0,
+      minSize: 50,
     },
     {
       id: 'description',
       header: 'description',
       accessorKey: 'description',
+      enableResizing: true,
+      size: 0,
+      minSize: 50,
     }
     ]});
 
@@ -72,6 +93,9 @@ function HomePage() {
       const columns = Object.keys(rows[0]).map((key) => ({
         header: key,
         accessorKey: key,
+        enableResizing: true,
+        size: 0,
+        minSize: 50,
       }));
 
       setData({ data: rows, columns });
