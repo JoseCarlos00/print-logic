@@ -4,11 +4,8 @@ import { useState } from "react";
 
 function SimpleTable({data, columns = []}) {
 
-  if (columns.length === 0) {
-    return <div>No columns defined</div>;
-  }
- 
   const [sorting, setSorting] = useState([]);
+
 
   const table = useReactTable({ data, 
     columns, 
@@ -19,6 +16,10 @@ function SimpleTable({data, columns = []}) {
     },
     onSortingChange: setSorting,
   });
+
+   if (columns.length === 0) {
+    return <div>No columns defined</div>;
+  }
 
   const classNameDescription = (value) => ['description', 'descripcion', 'item_desc'].includes(value.toLowerCase()) ? 'item_desc' : ''
 
